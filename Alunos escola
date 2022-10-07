@@ -1,0 +1,17 @@
+alunos=[]
+print('Digite |sair| para sair do cadastro')
+while True:
+    nome=input("Digite o nome do aluno: ")
+    if nome == 'sair':
+        break
+    else:
+        nota1=int(input("Digite a primeira nota do aluno: "))
+        nota2=int(input("Digite a segunda nota do aluno: "))
+        alunos.append((nome, nota1, nota2))
+print(alunos)
+for notas in alunos:
+    media=(notas[1] + notas[2]) / 2
+    if media >= 7:
+        print(f'O aluno {notas[0]} teve a média {media} e foi aprovado.')
+    else:
+        print(f'O aluno {notas[0]} teve a média {media} e foi reprovado.')
